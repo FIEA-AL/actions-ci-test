@@ -11,14 +11,6 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-#   sonarqube:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: SonarSource/sonarqube-scan-action@v1.2.0
-#       with:
-#         # Set the sonar.projectBaseDir analysis property
-#         projectBaseDir: .
-  
   sonarqube:
     name: Sonarqube
     runs-on: ubuntu-latest
@@ -36,6 +28,7 @@ jobs:
       permissions:
         contents: read
         packages: write
+      needs: sonarqube
       steps:
         - name: Checkout repository
           uses: actions/checkout@v3
