@@ -30,7 +30,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test using Node.js
-        uses: actions/setup-node@v2.5.2
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: '18'
       - run: npm ci
       - run: npm run test
 
