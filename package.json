@@ -7,7 +7,7 @@
   "scripts": {
     "dev:api": "nodemon api/server.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --verbose",
-    "test:ci": "jest",
+    "test:ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --ci --verbose",
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watch",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage"
   },
